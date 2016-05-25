@@ -38,7 +38,11 @@ defined('MOODLE_INTERNAL') || die();
 class qtype_YOURQTYPENAME_edit_form extends question_edit_form {
 
     protected function definition_inner($mform) {
-        $this->add_interactive_settings();
+        
+        // To add combined feedback (correct, partial and incorrect).
+        $this->add_combined_feedback_fields(true);
+        // Adds hinting features.
+        $this->add_interactive_settings(true, true);
     }
 
     protected function data_preprocessing($question) {
