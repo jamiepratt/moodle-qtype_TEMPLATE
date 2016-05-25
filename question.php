@@ -37,6 +37,7 @@ defined('MOODLE_INTERNAL') || die();
  */
 class qtype_YOURQTYPENAME_question extends question_graded_automatically_with_countback {
 
+    /* it may make more sense to think of this as get expected data types */
     public function get_expected_data() {
         // TODO.
         return array();
