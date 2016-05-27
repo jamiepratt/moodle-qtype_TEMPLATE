@@ -45,6 +45,8 @@ class qtype_YOURQTYPENAME_question extends question_graded_automatically_with_co
     
      public function start_attempt(question_attempt_step $step, $variant) {
         //TODO
+        /* there are 9 occurrances of this method defined in files called question.php a new install of Moodle
+        so you are probably going to have to define it */
     }
 
     public function summarise_response(array $response) {
