@@ -42,6 +42,10 @@ class qtype_YOURQTYPENAME_question extends question_graded_automatically_with_co
         // TODO.
         return array();
     }
+    
+     public function start_attempt(question_attempt_step $step, $variant) {
+        //TODO
+    }
 
     public function summarise_response(array $response) {
         // TODO.
