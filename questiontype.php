@@ -56,6 +56,8 @@ class qtype_YOURQTYPENAME extends question_type {
     }
 
     public function save_question_options($question) {
+        //TODO
+        /* code to save answers to the question_answers table */
         $this->save_hints($question);
     }
 
