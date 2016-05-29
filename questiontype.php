@@ -23,6 +23,8 @@
 
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+ 
+ /*https://docs.moodle.org/dev/Question_types#Question_type_and_question_definition_classes*/
 
 
 defined('MOODLE_INTERNAL') || die();
