@@ -95,7 +95,11 @@ class qtype_YOURQTYPENAME_question extends question_graded_automatically_with_co
                     $args, $forcedownload);
         }
     }
-
+    /**
+     * @param array $response responses, as returned by
+     *      {@link question_attempt_step::get_qt_data()}.
+     * @return array (number, integer) the fraction, and the state.
+     */
     public function grade_response(array $response) {
         // TODO.
         $fraction = 0;
