@@ -38,6 +38,8 @@ defined('MOODLE_INTERNAL') || die();
 class qtype_YOURQTYPENAME_edit_form extends question_edit_form {
 
     protected function definition_inner($mform) {
+        //Add fields specific to this question type
+        //remove any that come with the parent class you don't want
         
         // To add combined feedback (correct, partial and incorrect).
         $this->add_combined_feedback_fields(true);
