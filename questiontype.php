@@ -67,6 +67,25 @@ class qtype_YOURQTYPENAME extends question_type {
         // TODO.
         parent::initialise_question_instance($question, $questiondata);
     }
+    public function import_from_xml($data, $question, qformat_xml $format, $extra = null) {
+        if (!isset($data['@']['type']) || $data['@']['type'] != 'question_YOURQTYPENAME') {
+            return false;
+        }
+        $question = parent::import_from_xml($data, $question, $format, null);
+        $format->import_combined_feedback($question, $data, true);
+        $format->import_hints($question, $data, true, false, $format->get_format($question->questiontextformat));
+        return $question;
+    }
+    public function export_to_xml($question, qformat_xml $format, $extra = null) {
+        global $CFG;
+        $pluginmanager = core_plugin_manager::instance();
+        $gapfillinfo = $pluginmanager->get_plugin_info('question_YOURQTYPENAME');
+        $output = parent::export_to_xml($question, $format);
+        //TODO
+        $output .= $format->write_combined_feedback($question->options, $question->id, $question->contextid);
+        return $output;
+    }
+
 
     public function get_random_guess_score($questiondata) {
         // TODO.
