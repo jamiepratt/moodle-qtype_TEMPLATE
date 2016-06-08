@@ -77,7 +77,11 @@ class qtype_YOURQTYPENAME_question extends question_graded_automatically_with_co
                 $prevresponse, $newresponse, 'answer');
     }
 
-
+   /**
+     * @return question_answer an answer that
+     * contains the a response that would get full marks.
+     * used in preview mode
+     */
     public function get_correct_response() {
         // TODO.
         return array();
