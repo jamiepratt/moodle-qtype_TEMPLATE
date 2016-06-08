@@ -63,10 +63,24 @@ class qtype_YOURQTYPENAME extends question_type {
         $this->save_hints($question);
     }
 
-    protected function initialise_question_instance(question_definition $question, $questiondata) {
-        // TODO.
-        parent::initialise_question_instance($question, $questiondata);
+ /* populates fields such as combined feedback */
+   public function get_question_options($question) {
+       global $DB;
+       $question->options = $DB->get_record('question_YOURQTYPENAME',
+               array('questionid' => $question->id), '*', MUST_EXIST);
+       parent::get_question_options($question);
     }
+
+    protected function initialise_question_instance(question_definition $question, $questiondata) {
+        parent::initialise_question_instance($question, $questiondata);
+        $this->initialise_question_answers($question, $questiondata);
+        parent::initialise_combined_feedback($question, $questiondata);
+    }
+    
+    public initialise_question_answers($question, $questiondata){
+     //TODO
+    }
+    
     public function import_from_xml($data, $question, qformat_xml $format, $extra = null) {
         if (!isset($data['@']['type']) || $data['@']['type'] != 'question_YOURQTYPENAME') {
             return false;
