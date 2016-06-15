@@ -55,7 +55,11 @@ class qtype_YOURQTYPENAME_question extends question_graded_automatically_with_co
         /* there are 9 occurrances of this method defined in files called question.php a new install of Moodle
         so you are probably going to have to define it */
     }
-
+    
+    /**
+     * @return summary a string that summarises how the user responded. This 
+     * is used in the quiz responses report
+     * */
     public function summarise_response(array $response) {
         // TODO.
         return null;
