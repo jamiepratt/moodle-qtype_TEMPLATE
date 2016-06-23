@@ -113,6 +113,18 @@ class qtype_YOURQTYPENAME_question extends question_graded_automatically_with_co
         $fraction = 0;
         return array($fraction, question_state::graded_state_for_fraction($fraction));
     }
+      /**
+     * Work out a final grade for this attempt, taking into account all the
+     * tries the student made. Used in interactive behaviour once all
+     * hints have been used.     * 
+     * @param array $responses the response for each try. Each element of this
+     * array is a response array, as would be passed to {@link grade_response()}.
+     * There may be between 1 and $totaltries responses.
+     * @param int $totaltries The maximum number of tries allowed generally 
+     * not used in the implementation.
+     * @return numeric the fraction that should be awarded for this
+     * sequence of response.
+     */
 
     public function compute_final_grade($responses, $totaltries) {
         // TODO.
