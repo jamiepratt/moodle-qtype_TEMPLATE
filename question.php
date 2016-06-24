@@ -78,7 +78,26 @@ class qtype_YOURQTYPENAME_question extends question_graded_automatically_with_co
         // TODO.
         return '';
     }
-
+    
+    /** 
+     * if you are moving from viewing one question to another this will
+     * discard the processing if the answer has not changed. If you don't
+     * use this method it will constantantly generate new question steps and
+     * the question will be repeatedly set to incomplete. This is a comparison of
+     * the equality of two arrays.
+     * Comment from base class:
+     * 
+     * Use by many of the behaviours to determine whether the student's
+     * response has changed. This is normally used to determine that a new set
+     * of responses can safely be discarded.
+     *
+     * @param array $prevresponse the responses previously recorded for this question,
+     *      as returned by {@link question_attempt_step::get_qt_data()}
+     * @param array $newresponse the new responses, in the same format.
+     * @return bool whether the two sets of responses are the same - that is
+     *      whether the new set of responses can safely be discarded.
+     */
+     
     public function is_same_response(array $prevresponse, array $newresponse) {
         // TODO.
         return question_utils::arrays_same_at_key_missing_is_blank(
