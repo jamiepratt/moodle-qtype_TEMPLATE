@@ -67,6 +67,10 @@ class qtype_YOURQTYPENAME_question extends question_graded_automatically_with_co
 
     public function is_complete_response(array $response) {
         // TODO.
+        /* You might want to check that the user has done something
+            before returning true, e.g. clicked a radio button or entered some 
+            text 
+            */
         return true;
     }
 
