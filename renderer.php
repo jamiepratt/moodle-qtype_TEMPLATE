@@ -54,6 +54,9 @@ class qtype_YOURQTYPENAME_renderer extends qtype_renderer {
         }
 
         $result = html_writer::tag('div', $questiontext, array('class' => 'qtext'));
+        /* Some code to restore the state of the question as you move back and forth
+        from one question to another in a quiz and some code to disable the input fields
+        once a quesiton is submitted/marked */
 
         /* if ($qa->get_state() == question_state::$invalid) {
             $result .= html_writer::nonempty_tag('div',
