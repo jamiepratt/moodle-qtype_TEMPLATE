@@ -107,10 +107,12 @@ class qtype_YOURQTYPENAME_question extends question_graded_automatically_with_co
    /**
      * @return question_answer an answer that
      * contains the a response that would get full marks.
-     * used in preview mode
+     * used in preview mode. If this doesn't return a 
+     * correct value the button labeled "Fill in correct response"
+     * in the preview form will not work.
      */
     public function get_correct_response() {
-        // TODO.
+        // TODO.        
         return array();
     }
 
