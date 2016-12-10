@@ -18,20 +18,20 @@
  * Multi-answer question type upgrade code.
  *
  * @package    qtype
- * @subpackage template
+ * @subpackage YOURQTYPENAME
  * @copyright  2912 Marcus Green 
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 defined('MOODLE_INTERNAL') || die();
 
 /**
- * Upgrade code for the template question type.
+ * Upgrade code for the YOURQTYPENAME question type.
  * A selection of things you might want to do when upgrading
  * to a new version. This file is generally not needed for 
  * the first release of a question type.
  * @param int $oldversion the version we are upgrading from.
  */
-function xmldb_qtype_template_upgrade($oldversion = 0) {
+function xmldb_qtype_YOURQTYPENAME_upgrade($oldversion = 0) {
     global $CFG, $DB;
 
     $dbman = $DB->get_manager();
@@ -48,8 +48,8 @@ function xmldb_qtype_template_upgrade($oldversion = 0) {
     }
 
     
-    if( !$dbman->table_exists('question_gapfill_feedback')){
-            $table = new xmldb_table('question_templat4e_feature');
+    if( !$dbman->table_exists('question_YOURQTYPENAME_feedback')){
+            $table = new xmldb_table('question_YOURQTYPENAME_feature');
             $table->add_field('id', XMLDB_TYPE_INTEGER, '10', XMLDB_UNSIGNED, XMLDB_NOTNULL, XMLDB_SEQUENCE, null, null, null);
             $table->add_field('question', XMLDB_TYPE_INTEGER, '10', XMLDB_UNSIGNED, XMLDB_NOTNULL, null, null, null, null);
             $table->add_field('somefield', XMLDB_TYPE_CHAR, '255', null, XMLDB_NULL, null, null, null, '');
@@ -57,7 +57,7 @@ function xmldb_qtype_template_upgrade($oldversion = 0) {
             $dbman->create_table($table);
      }
     // Gapfill savepoint reached.
-    upgrade_plugin_savepoint(true, 2006082519, 'qtype', 'template');
+    upgrade_plugin_savepoint(true, 2006082519, 'qtype', 'YOURQTYPENAME');
 
     return;
 }
