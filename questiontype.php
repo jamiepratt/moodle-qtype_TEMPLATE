@@ -77,7 +77,7 @@ class qtype_YOURQTYPENAME extends question_type {
         parent::initialise_combined_feedback($question, $questiondata);
     }
     
-    public initialise_question_answers($question, $questiondata){
+    public function initialise_question_answers($question, $questiondata){
      //TODO
     }
     
