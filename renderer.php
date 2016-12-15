@@ -42,17 +42,7 @@ class qtype_YOURQTYPENAME_renderer extends qtype_renderer {
         $question = $qa->get_question();
 
         $questiontext = $question->format_questiontext($qa);
-        $placeholder = false;
-        if (preg_match('/_____+/', $questiontext, $matches)) {
-            $placeholder = $matches[0];
-        }
-        $input = '**subq controls go in here**';
-
-        if ($placeholder) {
-            $questiontext = substr_replace($questiontext, $input,
-                    strpos($questiontext, $placeholder), strlen($placeholder));
-        }
-
+       
         $result = html_writer::tag('div', $questiontext, array('class' => 'qtext'));
         /* Some code to restore the state of the question as you move back and forth
         from one question to another in a quiz and some code to disable the input fields
