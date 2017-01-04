@@ -104,12 +104,14 @@ class qtype_YOURQTYPENAME_question extends question_graded_automatically_with_co
                 $prevresponse, $newresponse, 'answer');
     }
 
-   /**
+     /**
      * @return question_answer an answer that
      * contains the a response that would get full marks.
      * used in preview mode. If this doesn't return a 
      * correct value the button labeled "Fill in correct response"
-     * in the preview form will not work.
+     * in the preview form will not work. This value gets written
+     * into the rightanswer field of the question_attempts table
+     * when a quiz containing this question starts.
      */
     public function get_correct_response() {
         // TODO.        
