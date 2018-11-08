@@ -26,15 +26,6 @@ var that = this;
 var result = {
 
     componentInit: function() {
-        /**
-         * If the question is in a readonly state, e.g. after being
-         * answered or in the review page then stop any further
-         * selections.
-         *
-         * @param {NodeList} draggables
-         * @param {MouseEvent} event
-         * @return {string} value of target
-         **/
         if (!this.question) {
             console.warn('Aborting because of no question received.');
             return that.CoreQuestionHelperProvider.showComponentError(that.onAbort);
