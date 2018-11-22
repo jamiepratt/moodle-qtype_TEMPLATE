@@ -117,7 +117,18 @@ class qtype_YOURQTYPENAME_question extends question_graded_automatically_with_co
         // TODO.        
         return array();
     }
-
+    /**
+     * Given a response, reset the parts that are wrong. Relevent in
+     * interactive with multiple tries
+     * @param array $response a response
+     * @return array a cleaned up response with the wrong bits reset.
+     */
+    public function clear_wrong_from_response(array $response) {
+        foreach ($response as $key => $value) {
+            /*clear the wrong response/s*/
+        }
+        return $response;
+    }
 
     public function check_file_access($qa, $options, $component, $filearea,
             $args, $forcedownload) {
