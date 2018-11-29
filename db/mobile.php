@@ -17,7 +17,7 @@ $addons = array(
                     'version' => '1.00'
                 ),
                 'lang' => array(
-                    array('Question name', 'pluginname')
+                    array('YOURQTYPENAME name', 'pluginname')
                 )
             )
         ),
