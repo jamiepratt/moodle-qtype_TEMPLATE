@@ -50,6 +50,8 @@ var result = {
             this.question.feedback = div.querySelector('.feedback');
             this.question.feedbackHTML = true;
         }
+        
+         this.question.text = this.CoreDomUtilsProvider.getContentsOfElement(div, '.qtext');
 
         if (typeof this.question.text == 'undefined') {
             this.logger.warn('Aborting because of an error parsing question.', this.question.name);
