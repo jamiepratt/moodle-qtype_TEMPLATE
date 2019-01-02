@@ -59,6 +59,12 @@ var result = {
             this.logger.warn('Aborting because of an error parsing question.', this.question.name);
             return this.CoreQuestionHelperProvider.showComponentError(this.onAbort);
         }
+        
+        // Called by the reference in *.html to 
+        // (afterRender)="questionRendered()
+        this.questionRendered = function questionRendered() {
+            //do stuff that needs the question rendered before it can run.
+        }
 
         // Wait for the DOM to be rendered.
         setTimeout(() => {
