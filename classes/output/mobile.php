@@ -42,18 +42,14 @@ class mobile {
      */
     public static function mobile_get_YOURQTYPENAME() {
         global $CFG;
-        $templatepath = $CFG->wwwroot . '/question/type/YOURQTYPENAME/mobile/addon-qtype-YOURQTYPENAME.html';
-        $template = file_get_contents($templatepath);
-        $jsfilepath = $CFG->wwwroot . '/question/type/YOURQTYPENAME/mobile/mobile.js';
-        $jscontent = file_get_contents($jsfilepath);
         return [
             'templates' => [
                 [
                     'id' => 'main',
-                    'html' => $template
-                ]
+                    'html' => file_get_contents($CFG->dirroot .'/question/type/YOURQTYPENAME/mobile/qtype-gapfill.html')
+                    ]
             ],
-            'javascript' => $jscontent
+            'javascript' => file_get_contents($CFG->dirroot . '/question/type/YOURQTYPENAME/mobile/mobile.js')
         ];
     }
 }
