@@ -36,7 +36,7 @@ defined('MOODLE_INTERNAL') || die();
 class mobile {
 
     /**
-     * Returns the YOURQTYPENAME quetion type for the quiz the mobile app.
+     * Returns the YOURQTYPENAME question type for the quiz the mobile app.
      *
      * @return void
      */
