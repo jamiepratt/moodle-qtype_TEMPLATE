@@ -21,6 +21,7 @@ Additional features by comparisons with Jamies version
 * db folder and files
 * backup template code
 * xml import/export code
+* mobile app support
 
 
 ### Who should use
