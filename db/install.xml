@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<XMLDB PATH="question/type/template/db" VERSION="2013070" COMMENT="XMLDB file for Moodle question/type/template"
+<XMLDB PATH="question/type/template/db" VERSION="2013070" COMMENT="XMLDB file for Moodle question/type/YOURQTYPENAME"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="../../../../lib/xmldb/xmldb.xsd"
 >
   <TABLES>
-    <TABLE NAME="question_template" COMMENT="description of table, e.g. options associated with eqch question">
+    <TABLE NAME="question_YOURQTYPENAME" COMMENT="description of table, e.g. options associated with eqch question">
       <FIELDS>
         <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" NEXT="question"/>
         <FIELD NAME="question" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="Foreign key references question.id" PREVIOUS="id" NEXT="answerdisplay"/>
