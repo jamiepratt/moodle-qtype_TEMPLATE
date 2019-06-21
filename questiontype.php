@@ -56,7 +56,14 @@ class qtype_YOURQTYPENAME extends question_type {
         parent::delete_files($questionid, $contextid);
         $this->delete_files_in_hints($questionid, $contextid);
     }
-
+     /**
+     * @param stdClass $question
+     * @param array $form
+     * @return object
+     */
+    public function save_question($question, $form) {
+        return parent::save_question($question, $form);
+    }
     public function save_question_options($question) {
         //TODO
         /* code to save answers to the question_answers table */
