@@ -65,8 +65,16 @@ class qtype_YOURQTYPENAME extends question_type {
         return parent::save_question($question, $form);
     }
     public function save_question_options($question) {
-        //TODO
-        /* code to save answers to the question_answers table */
+        global $DB;
+        $options = $DB->get_record('question_YOURQTYPENAME', array('questionid' => $question->id));
+        if (!$options) {
+            $options = new stdClass();
+            $options->questionid = $question->id;
+            /* add any more non combined feedback fields here */
+            $options->id = $DB->insert_record('question_imageselect', $options);
+        }
+        $options = $this->save_combined_feedback_helper($options, $question, $question->context, true);
+        $DB->update_record('question_YOURQTYPENAME', $options);
         $this->save_hints($question);
     }
 
