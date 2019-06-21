@@ -72,9 +72,7 @@ class qtype_YOURQTYPENAME extends question_type {
 
  /* populates fields such as combined feedback */
    public function get_question_options($question) {
-       global $DB;
-       $question->options = $DB->get_record('question_YOURQTYPENAME',
-               array('questionid' => $question->id), '*', MUST_EXIST);
+     //TODO
        parent::get_question_options($question);
     }
 
