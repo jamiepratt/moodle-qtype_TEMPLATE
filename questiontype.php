@@ -84,6 +84,9 @@ class qtype_YOURQTYPENAME extends question_type {
        parent::get_question_options($question);
     }
 
+ /**
+ executed at runtime (e.g. in a quiz or preview 
+ **/
     protected function initialise_question_instance(question_definition $question, $questiondata) {
         parent::initialise_question_instance($question, $questiondata);
         $this->initialise_question_answers($question, $questiondata);
