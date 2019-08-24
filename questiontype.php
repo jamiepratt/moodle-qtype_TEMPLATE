@@ -78,14 +78,17 @@ class qtype_YOURQTYPENAME extends question_type {
         $this->save_hints($question);
     }
 
- /* populates fields such as combined feedback */
+ /* 
+ * populates fields such as combined feedback 
+ * also make $DB calls to get data from other tables
+ */
    public function get_question_options($question) {
      //TODO
        parent::get_question_options($question);
     }
 
  /**
- executed at runtime (e.g. in a quiz or preview 
+ * executed at runtime (e.g. in a quiz or preview 
  **/
     protected function initialise_question_instance(question_definition $question, $questiondata) {
         parent::initialise_question_instance($question, $questiondata);
