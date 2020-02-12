@@ -23,7 +23,9 @@ Additional features by comparisons with Jamies version
 * xml import/export code
 * mobile app support
 
-### Additional advice can be found here https://github.com/marcusgreen/moodle-qtype_TEMPLATE/wiki
+### Additional advice can be found here 
+
+https://github.com/marcusgreen/moodle-qtype_TEMPLATE/wiki
 
 ### Who should use
 
