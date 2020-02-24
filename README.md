@@ -1,5 +1,4 @@
-Question type template
-----------------------
+# Question type template
 
 A simple question type template.
 
@@ -12,7 +11,7 @@ It is a copy of the shortanswer question type with everything unnecessary remove
 * no input controls at all in question as yet
 * it doesn't install any new tables
 
-###Who should use
+## Who should use
 
 
 This is one alternative start for devloping a question type plug in and is working code as is. Although it doesn't do any actual
@@ -28,9 +27,9 @@ question classes. There are quite a few examples of queston types that do this a
 * or this code might help start you off.
 
 
-###Installation
+## Installation
 
-####Installation Using Git 
+### Installation Using Git 
 
 To install using git for the latest version (the master branch), type this command in the
 root of your Moodle install:
@@ -38,7 +37,7 @@ root of your Moodle install:
     git clone git://github.com/jamiepratt/moodle-qtype_TEMPLATE.git question/type/TEMPLATE
     echo '/question/type/TEMPLATE' >> .git/info/exclude
 
-####Installation From Downloaded zip file
+### Installation From Downloaded zip file
 
 Alternatively, download the zip from :
 
@@ -46,12 +45,12 @@ Alternatively, download the zip from :
 
 unzip it into the question/type folder, and then rename the new folder to TEMPLATE.
 
-####Doesn't get installed as long as it is called TEMPLATE
+### Doesn't get installed as long as it is called TEMPLATE
 
 You can keep a copy of the template in Moodle in the question/type/ folder and as long as it is called TEMPLATE the plug in will
 be ignored.
 
-###Use
+## Use
 
 
 * Copy or rename the module directory to YOURQTYPENAME.
