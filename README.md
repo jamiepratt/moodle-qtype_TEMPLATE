@@ -1,8 +1,6 @@
-Question type template
-----------------------
-A clone of Jamie Pratts Question type template
+# Question type template
 
-https://github.com/jamiepratt/moodle-qtype_TEMPLATE
+A clone of Jamie Pratts [Question type template](https://github.com/jamiepratt/moodle-qtype_TEMPLATE)
 
 Except with more features (or at least more template features)
 
@@ -23,12 +21,11 @@ Additional features by comparisons with Jamies version
 * xml import/export code
 * mobile app support
 
-### Additional advice can be found here 
+## Additional advice can be found here 
 
 https://github.com/marcusgreen/moodle-qtype_TEMPLATE/wiki
 
-### Who should use
-
+## Who should use
 
 This is one alternative start for devloping a question type plug in and is working code as is. Although it doesn't do any actual
 grading or collect student input at all.
@@ -42,10 +39,9 @@ question classes. There are quite a few examples of queston types that do this a
         for example classes in ddimageortext and ddmarker both inherit from common code in ddimageortext and those inherit code from the gapselect question type
 * or this code might help start you off.
 
+## Installation
 
-###Installation
-
-####Installation Using Git 
+### Installation Using Git 
 
 To install using git for the latest version (the master branch), type this command in the
 root of your Moodle install:
@@ -53,7 +49,7 @@ root of your Moodle install:
     git clone git://github.com/marcusgreen/moodle-qtype_TEMPLATE.git question/type/TEMPLATE
     echo '/question/type/TEMPLATE' >> .git/info/exclude
 
-####Installation From Downloaded zip file
+### Installation From Downloaded zip file
 
 Alternatively, download the zip from :
 
@@ -61,13 +57,12 @@ Alternatively, download the zip from :
 
 unzip it into the question/type folder, and then rename the new folder to TEMPLATE.
 
-####Doesn't get installed as long as it is called TEMPLATE
+### Doesn't get installed as long as it is called TEMPLATE
 
 You can keep a copy of the template in Moodle in the question/type/ folder and as long as it is called TEMPLATE the plug in will
 be ignored.
 
-###Use
-
+## Use
 
 * Copy or rename the module directory to YOURQTYPENAME.
 * Replace all occurances of YOURQTYPENAME in files with the new name for your question type.
