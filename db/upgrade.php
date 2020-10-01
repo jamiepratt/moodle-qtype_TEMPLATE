@@ -35,29 +35,5 @@ function xmldb_qtype_YOURQTYPENAME_upgrade($oldversion = 0) {
     global $CFG, $DB;
 
     $dbman = $DB->get_manager();
-    if ($oldversion < 2006082505) {        
-        $table = new xmldb_table('question_tablename');
-        $field = new xmldb_field('fieldname');
-        $dbman->drop_field($table, $field);
-    }
-
-    if (!$dbman->field_exists('question_tablename', 'somefield')) {
-        $field = new xmldb_field('somefield', XMLDB_TYPE_INTEGER, '1');
-        $table = new xmldb_table('question_tablename');
-        $dbman->add_field($table, $field);
-    }
-
-    
-    if( !$dbman->table_exists('question_YOURQTYPENAME_feedback')){
-            $table = new xmldb_table('question_YOURQTYPENAME_feature');
-            $table->add_field('id', XMLDB_TYPE_INTEGER, '10', XMLDB_UNSIGNED, XMLDB_NOTNULL, XMLDB_SEQUENCE, null, null, null);
-            $table->add_field('question', XMLDB_TYPE_INTEGER, '10', XMLDB_UNSIGNED, XMLDB_NOTNULL, null, null, null, null);
-            $table->add_field('somefield', XMLDB_TYPE_CHAR, '255', null, XMLDB_NULL, null, null, null, '');
-            $table->add_key('primary', XMLDB_KEY_PRIMARY, array('id'), null, null);
-            $dbman->create_table($table);
-     }
-    // Gapfill savepoint reached.
-    upgrade_plugin_savepoint(true, 2006082519, 'qtype', 'YOURQTYPENAME');
-
-    return;
+    return true;
 }
