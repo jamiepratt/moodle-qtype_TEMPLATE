@@ -30,7 +30,7 @@ defined('MOODLE_INTERNAL') || die();
 /** 
 *This holds the definition of a particular question of this type. 
 *If you load three questions from the question bank, then you will get three instances of 
-*that class. This class is not just the question definition, it can also track the current 7
+*that class. This class is not just the question definition, it can also track the current
 *state of a question as a student attempts it through a question_attempt instance. 
 */
 
