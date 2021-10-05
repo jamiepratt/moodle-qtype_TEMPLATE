@@ -25,7 +25,7 @@ defined('MOODLE_INTERNAL') || die();
 global $CFG;
 require_once($CFG->dirroot . '/question/type/questionbase.php');
 require_once($CFG->dirroot . '/question/engine/tests/helpers.php');
-require_once($CFG->dirroot . '/question/type/YOURQTYPE/question.php');
+require_once($CFG->dirroot . '/question/type/YOURQTYPE/helper.php');
 /**
  * Unit tests for the YOURQTYPE question definition class.
  *
