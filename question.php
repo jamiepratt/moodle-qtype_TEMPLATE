@@ -57,8 +57,11 @@ class qtype_YOURQTYPENAME_question extends question_graded_automatically_with_co
     }
     
     /**
-     * @return summary a string that summarises how the user responded. This 
-     * is used in the quiz responses report
+     * @return summary 
+     * A string that summarises how the user responded. 
+     * It is written to responsesummary field of
+     * the question_attempts table, and used in the
+     * the quiz responses report
      * */
     public function summarise_response(array $response) {
         // TODO.
