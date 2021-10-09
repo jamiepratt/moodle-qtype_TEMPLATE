@@ -103,7 +103,7 @@ class qtype_YOURQTYPENAME_question extends question_graded_automatically_with_co
      
     public function is_same_response(array $prevresponse, array $newresponse) {
         // TODO.
-        return true;
+        return false;
     }
 
      /**
