@@ -103,8 +103,7 @@ class qtype_YOURQTYPENAME_question extends question_graded_automatically_with_co
      
     public function is_same_response(array $prevresponse, array $newresponse) {
         // TODO.
-        return question_utils::arrays_same_at_key_missing_is_blank(
-                $prevresponse, $newresponse, 'answer');
+        return true;
     }
 
      /**
