@@ -13,19 +13,11 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
-
 /**
- * Strings for component 'qtype_YOURQTYPENAME', language 'en', branch 'MOODLE_20_STABLE'
+ * Contains the helper class for the select missing words question type tests.
  *
  * @package    qtype
- * @subpackage YOURQTYPENAME
- * @copyright  THEYEAR YOURNAME (YOURCONTACTINFO)
-
+ * @copyright  Year Yourname
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-$string['pluginname'] = 'YOURQTYPENAME';
-$string['pluginname_help'] = 'Create a YOURQTYPENAME question type with insert question description here.';
-$string['pluginname_link'] = 'question/type/YOURQTYPENAME';
-$string['pluginnameadding'] = 'Adding a YOURQTYPENAME question';
-$string['pluginnameediting'] = 'Editing a YOURQTYPENAME question';
-$string['pluginnamesummary'] = 'A YOURQTYPENAME question type that allows something to be done that can test a student on some understanding.';
+defined('MOODLE_INTERNAL') || die();

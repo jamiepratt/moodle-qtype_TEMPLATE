@@ -15,17 +15,25 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'qtype_YOURQTYPENAME', language 'en', branch 'MOODLE_20_STABLE'
+ * Multi-answer question type upgrade code.
  *
  * @package    qtype
  * @subpackage YOURQTYPENAME
- * @copyright  THEYEAR YOURNAME (YOURCONTACTINFO)
-
+ * @copyright  2912 Marcus Green 
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-$string['pluginname'] = 'YOURQTYPENAME';
-$string['pluginname_help'] = 'Create a YOURQTYPENAME question type with insert question description here.';
-$string['pluginname_link'] = 'question/type/YOURQTYPENAME';
-$string['pluginnameadding'] = 'Adding a YOURQTYPENAME question';
-$string['pluginnameediting'] = 'Editing a YOURQTYPENAME question';
-$string['pluginnamesummary'] = 'A YOURQTYPENAME question type that allows something to be done that can test a student on some understanding.';
+defined('MOODLE_INTERNAL') || die();
+
+/**
+ * Upgrade code for the YOURQTYPENAME question type.
+ * A selection of things you might want to do when upgrading
+ * to a new version. This file is generally not needed for 
+ * the first release of a question type.
+ * @param int $oldversion the version we are upgrading from.
+ */
+function xmldb_qtype_YOURQTYPENAME_upgrade($oldversion = 0) {
+    global $CFG, $DB;
+
+    $dbman = $DB->get_manager();
+    return true;
+}
